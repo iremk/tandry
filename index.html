@@ -2,13 +2,69 @@
   <head>
     <title>tandry</title>
     <link rel="stylesheet" type="text/css" href="style.css" />
-    <script type="text/javascript" src="javascript/tandry.js"></script> 
+    <script type="text/javascript" src="javascript/tandry.js"></script>
+    <script type="text/javascript" src="javascript/jquery-1.6.4.min.js"></script> 
+    <script type="text/javascript">
+         $(document).ready(function() {
+        	
+        	 $('#loginButton').click(function() {
+        		if ($(".loginHeader").is(":hidden")) {
+        			$(".loginHeader").slideDown("slow");
+        		} else {
+        			$(".loginHeader").slideUp("slow");
+        		}
+        	});
+         });
+    </script>
+    <link rel="icon" 
+      type="image/png" 
+      href="images/favicon.png">
   </head>
+  
   <body>
   <div class="header">
-	  <div class="topBar" align="left">
-	  	<div class="topLogo"><a href="http://tandry.com" class="logo" id="logo">tandry</a></div>
+	  <div class="topBar">
+	  	<div class="topLogo" style="float: left;">
+	  	    <a href="http://tandry.com" class="logo" id="logo" >tandry</a>
+	  	</div>
+	  	<div class="topLogo" style="float: right;">
+	  	    <a id="loginButton" class="logo" >login</a>
+	  	</div>	  	
 	  </div>
-	  </div>
+  </div>
+  <div class="loginHeader" style="display: none;">
+      <div class="topBar">
+        <div class="topLogo" style="display: inline-block; float: right;">
+            <form class="formClass">
+                <input type="text" class="tandryTextBox" placeholder="username"/>
+                <input type="password" class="tandryTextBox" placeholder="password"/>
+                <input type="submit" class="tandryButton" id="loginButton" value="login"/>
+            </form>
+        </div>        
+      </div>
+   </div>
+   <div class="registerPart">
+        <div class="topBar">
+            <div class="topLogo" style="float: left;">
+                <a href="www.tandry.com" style="text-decoration: none;"><label class="registerLink">tandry.</label></a><br />
+                <label style="font-family: Helvetica Neue, sans-serif; font-size: 18px;">learn what people think about your <br />
+                opinions without even knowing them...</label><br />
+                <img style="margin-left: -20px;" alt="" src="images/tandryOpening.png" width="384px" height="384px" />                                 
+            </div>
+        </div>
+   </div>
+   <div class="registerPart">
+        <div class="topBar">
+            <div class="topLogo" style="float: right;">
+                <label class="registerLink">sign.up</label><br /><br />
+                <form class="formClass">
+                    <input type="text" class="tandryTextBox" style="width: 240px;" placeholder="username"/><br /><br />
+                    <input type="text" class="tandryTextBox" style="width: 240px;" placeholder="mail"/><br /><br />
+                    <input type="password" class="tandryTextBox" style="width: 240px;" placeholder="password"/><br /><br />
+                    <input style="float: right;" type="submit" class="tandryButton" id="loginButton" value="sign.up"/>
+                </form>                                 
+            </div>
+        </div>
+   </div>
   </body>
 </html>
